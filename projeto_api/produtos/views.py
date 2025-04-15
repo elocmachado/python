@@ -10,7 +10,7 @@ class CategoriaList (generics.ListCreateAPIView):
 class CategoriaDetail (generics.RetrieveUpdateDestroyAPIView):
     queryset = Categoria.objects.all ()
     serializer_class = CategoriaSerializer
-class ProdutoList (generics.ListAPIView):
+class ProdutoList (generics.ListCreateAPIView):
     queryset = Produto.objects.all ()
     serializer_class = ProdutoSerializer
 class ProdutoDetail (generics.RetrieveUpdateDestroyAPIView):
