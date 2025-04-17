@@ -1,0 +1,14 @@
+.seta {
+    background-color: #FFDAB9;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 5px whitesmoke;
+    transition: background 0.3s;
+  }
+  
+  .seta:hover {
+    background-color: #e0e0e0;
+  }

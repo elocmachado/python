@@ -1,6 +1,6 @@
-documento.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () =>{
     fetchProdutos();
-});
+})
 
 function fetchProdutos(){
     fetch("http://localhost:8000/api/produtos/")
@@ -14,10 +14,13 @@ function renderProdutos(produtos){
     const container = document.getElementById("produtos-container");
     container.innerHTML = "";
 
-    produtos.forEach(produto =>{
+    produtos.forEach(produto => {
         const card = document.createElement("div");
         card.className = "produto";
-        card.innerHTML`
+        card.innerHTML = `
+            <div class ="imagem-container">
+                <img src="${produto.imagem}"alt="${produto.nome}"/>
+            </div>
             <h2>${produto.nome}</h2>
             <p>${produto.descricao}</p>
             <p class="preco">R$ ${produto.preco}</p>
